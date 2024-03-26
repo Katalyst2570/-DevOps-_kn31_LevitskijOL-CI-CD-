@@ -3,17 +3,17 @@ class Employee:
     def __init__(self, first, last):
         self.first = first
         self.last = last
-
+;;;;asd;;;;;;;;;
     @property
     def email(self):
         return '{}.{}@email.com'.format(self.first, self.last)
 
     @property
-    def fullname(self):
+    def fullname(self):';;;;;;;;
         return '{} {}'.format(self.first, self.last)
     
     @fullname.setter
-    def fullname(self, name):
+    def fullname(self, name):()()()()()
         first, last = name.split(' ')  # Ця строка може викинути помилку, якщо рядок name має більше або менше одного пробілу
         self.first = first
         self.last = last
@@ -26,7 +26,7 @@ class Employee:
 
 emp_1 = Employee('John', 'Smith')
 emp_1.fullname = "Corey Schafer"
-
+;l;;;;l,l;;;;;;;
 print(emp_1.first)
 print(emp_1.email)
 print(emp_1.fullname)
