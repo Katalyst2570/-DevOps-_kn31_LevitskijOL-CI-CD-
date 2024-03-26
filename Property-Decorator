@@ -1,4 +1,3 @@
-
 class Employee:
 
     def __init__(self, first, last):
@@ -13,25 +12,22 @@ class Employee:
     def fullname(self):
         return '{} {}'.format(self.first, self.last)
     
-    @fullname.setter
+   @fullname.setter
+   def fullname(self, name):
+    try:
         first, last = name.split(' ')
         self.first = first
         self.last = last
-    
-    @fullname.deleter
-    def fullname(self):
-        print('Delete Name!')
-        self.last = None
+    except ValueError:
+        # Замість виведення повідомлення можна обробити помилку або просто пропустити дію.
+        pass
 
+   @fullname.deleter
+   def fullname(self):
+   # Видалення атрибутів без додаткових повідомлень.
+   del self.first
+   del self.last
 
-emp_1 = Employee('John', 'Smith')
-emp_1.fullname = "Corey Schafer"
-
-print(emp_1.first)
-print(emp_1.email)
-print(emp_1.fullname)
-
-del emp_1.fullname
 
 emp_1 = Employee('John', 'Smith')
 emp_1.fullname = "Corey Schafer"
