@@ -14,7 +14,6 @@ class Employee:
         return '{} {}'.format(self.first, self.last)
     
     @fullname.setter
-    def fullname(self, name):
         first, last = name.split(' ')
         self.first = first
         self.last = last
@@ -22,7 +21,6 @@ class Employee:
     @fullname.deleter
     def fullname(self):
         print('Delete Name!')
-        self.first = None
         self.last = None
 
 
