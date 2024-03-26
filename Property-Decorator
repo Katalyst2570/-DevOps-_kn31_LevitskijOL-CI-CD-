@@ -34,3 +34,12 @@ print(emp_1.email)
 print(emp_1.fullname)
 
 del emp_1.fullname
+
+emp_1 = Employee('John', 'Smith')
+emp_1.fullname = "Corey Schafer"
+
+print(emp_1.first)
+print(emp_1.email)
+print(emp_1.fullname)
+
+del emp_1.fullname
